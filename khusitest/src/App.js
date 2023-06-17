@@ -1,14 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-import AppBar from './components/AppBar';
+import Navbar from './components/Navbar';
+import { Routes } from "react-router-dom";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faHouse } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+// Add the following line to initialize the library
+library.add(faHouse);
 function App() {
   return (
     <div className="App">
-      <AppBar/>
+      <Navbar/>
+      
+    
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hello All KhusHarmonite.Stay Tuned For a Brand New App!
+          Hello All KhusiHarmonite.Stay Tuned For a Brand New App!
           {/* Edit <code>src/App.js</code> and save to reload. */}
         </p>
         <a
