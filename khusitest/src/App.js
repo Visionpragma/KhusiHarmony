@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
-import { Routes } from "react-router-dom";
+import Tenant from './components/Tenant';
+import { Router, Routes ,Route} from "react-router-dom";
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,9 +12,13 @@ library.add(faHouse);
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      <Routes>
+        <Route path="/Tenant" element={<Tenant/>}/>
+      </Routes>
       
-    
+      <Navbar/>
+     
+      
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

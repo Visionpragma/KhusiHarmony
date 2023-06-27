@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 import { faCogs, faHome, faImages, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export const MenuItems = [
-
     {
         title:"Home",
         url:"/",
@@ -17,7 +17,7 @@ export const MenuItems = [
     },
     {
         title:"Tenant",
-        url:"/",
+        url:"/Tenant",
         cName:"nav-links",
         icon:"faCogs"
     },
@@ -30,3 +30,4 @@ export const MenuItems = [
 
     // Make a list of Navlinks & their properties.
   ];
+
