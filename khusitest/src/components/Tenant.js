@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TextField,makeStyles,Button } from '@mui/material';
 import { Container } from 'react-bootstrap';
 import { json } from 'react-router-dom';
-import { ToastContainer,toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
   
@@ -23,11 +23,12 @@ function RegistrationPage() {
     event.preventDefault();
     const tenant={name,mobileNo,address}
     console.log(tenant)
-        fetch("http://localhost:8080/tenant/add",{
+        //fetch("http://localhost:8080/tenant/add",{
+          fetch("http://khusiharmonyspringbootapp-env.eba-bjghepdc.us-east-1.elasticbeanstalk.com/tenant/add",{
         method:"POST",
         headers:{"Content-Type":"application/json"},
         body:JSON.stringify(tenant)
-    }).then((res)=> {console.log("New Tenant Got added")
+    }).then((res)=> {console.log("New Tenant {name} Got added")
         toast.success("Wow Tenant got added successfully!")
    
     })
